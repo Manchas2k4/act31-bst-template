@@ -519,7 +519,7 @@ bool BST<T>::isFull() const {
 // =================================================================
 template <class T>
 T BST<T>::ancestor(T val) const {
-	if (!empty()) {
+	if (empty()) {
 		throw NoSuchElement();
 	}
 
