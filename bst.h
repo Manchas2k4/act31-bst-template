@@ -40,7 +40,6 @@ private:
 	void postOrder(std::stringstream&) const;
 	void preOrder(std::stringstream&) const;
 
-	void byLevel(std::stringstream&) const;
 	uint leaves() const;
 	bool isFull() const;
 	T ancestor(T) const;
@@ -257,15 +256,6 @@ void Node<T>::preOrder(std::stringstream &aux) const {
 	if (right != NULL) {
 		right->preOrder(aux);
 	}
-}
-
-// =================================================================
-// Go through the tree per level.
-//
-// @param aux, a stringstream used to create the string to display.
-// =================================================================
-template <class T>
-void Node<T>::byLevel(std::stringstream &aux) const {
 }
 
 // =================================================================
