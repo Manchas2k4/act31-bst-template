@@ -528,6 +528,5 @@ T BST<T>::ancestor(T val) const {
 	}
 
 	return root->ancestor(val);
-	return false;
 }
 #endif /* BST_H */
