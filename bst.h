@@ -41,6 +41,7 @@ private:
 	void preOrder(std::stringstream&) const;
 
 	uint leaves() const;
+	uint depth() const;
 	bool isFull() const;
 	T ancestor(T) const;
 
@@ -271,6 +272,19 @@ uint Node<T>::leaves() const {
 }
 
 // =================================================================
+// Returns the depth of the node. Remember that the depth of a node
+// is defined as the greater depth of both children plus 1. If it is
+//	a leaf, it returns 1.
+//
+// @return the depth of the node.
+// =================================================================
+template <class T>
+uint Node<T>::depth() const {
+	//TO DO
+	return 0;
+}
+
+// =================================================================
 // Returns if a node is full. A node is said to be complete if:
 // a) it is a leaf, b) they have both children, both children are
 // full and both children have the same depth.
@@ -476,7 +490,7 @@ std::string BST<T>::byLevel() const {
 
 	aux << "[";
 	if (!empty()) {
-		root->byLevel(aux);
+		// TO DO
 	}
 	aux << "]";
 	return aux.str();

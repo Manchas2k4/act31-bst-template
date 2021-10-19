@@ -19,7 +19,9 @@ Las funciones que debes implementar son:
 
 2. ```template <class T> uint Node<T>::leaves() const```
 Regresa la cantidad de hojas que están por debajo del nodo actual. Recuerda que un nodo sin hijo es una hoja. En caso contrario, se deberá regresa la cantidad de hojas del hijo izquierdo más las hojas que están en el lado derecho.
-3. ```template <class T> bool Node<T>::isFull() const```
+3. ```template <class T> uint Node<T>::depth() const```
+Este método es empleado en el desarrollo del método **isFull**. Regresa la profundidad del nodo. Recuerda que la profundidad de un nodo se define como la mayor profundidad de ambos hijos más 1. Si es una hoja, regresa 1.
+4. ```template <class T> bool Node<T>::isFull() const```
 Regresa verdadero si el nodo actual es la base de un subárbol completo. En cualquier otro caso, regresa falso. Un árbol se considera completo si:
 	- El nodo es una hoja.
 	- El nodo tiene ambos hijos, sus dos hijos son la base de un subárbol completo y ambos hijos tienen la misma profundidad.
